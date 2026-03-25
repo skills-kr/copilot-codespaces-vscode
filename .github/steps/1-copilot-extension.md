@@ -6,33 +6,33 @@
   Encourage users to open new tabs for steps!
 -->
 
-## Step 1: Leverage Codespaces with VS Code for Copilot
+## 1단계: Codespace에서 VS Code로 Copilot 활용하기
 
-_Welcome to "Develop With AI Powered Code Suggestions Using GitHub Copilot and VS Code"! :wave:_
+_"GitHub Copilot과 VS Code를 사용한 AI 기반 코드 제안으로 개발하기"에 오신 것을 환영합니다! :wave:_
 
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. It draws context from comments and code to suggest individual lines and whole functions instantly. GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI.
+GitHub Copilot은 더 빠르고 적은 노력으로 코드를 작성할 수 있도록 도와주는 AI 페어 프로그래머입니다. 주석과 코드에서 컨텍스트를 파악하여 개별 줄과 전체 함수를 즉시 제안합니다. GitHub Copilot은 OpenAI가 만든 생성형 사전 훈련 언어 모델인 OpenAI Codex로 구동됩니다.
 
-**Copilot works with many code editors including VS Code, Visual Studio, JetBrains IDE, and Neovim.**
+**Copilot은 VS Code, Visual Studio, JetBrains IDE, Neovim 등 다양한 코드 에디터에서 작동합니다.**
 
-Additionally, GitHub Copilot is trained on all languages that appear in public repositories. For each language, the quality of suggestions you receive may depend on the volume and diversity of training data for that language.
+또한 GitHub Copilot은 공개 리포지토리에 있는 모든 언어로 훈련되었습니다. 각 언어에 대해 받는 제안의 품질은 해당 언어의 훈련 데이터 양과 다양성에 따라 달라질 수 있습니다.
 
-Using Copilot inside a Codespace shows just how easy it is to get up and running with GitHub's suite of [Collaborative Coding](https://github.com/features#features-collaboration) tools.
+Codespace에서 Copilot을 사용하면 GitHub의 [협업 코딩](https://github.com/features#features-collaboration) 도구 모음을 얼마나 쉽게 시작할 수 있는지 보여줍니다.
 
-> **Note**
-> This skills exercise will focus on leveraging GitHub Codespace. It is recommended that you complete the GitHub skill, [Codespaces](https://github.com/skills/code-with-codespaces), before moving forward with this exercise.
+> **참고**
+> 이 실습은 GitHub Codespace 활용에 초점을 맞추고 있습니다. 이 실습을 진행하기 전에 GitHub 스킬 [Codespaces](https://github.com/skills/code-with-codespaces)를 완료하는 것을 권장합니다.
 
-### :keyboard: Activity: Enable Copilot inside a Codespace
+### :keyboard: 활동: Codespace에서 Copilot 활성화하기
 
-**We recommend opening another browser tab to work through the following activities so you can keep these instructions open for reference.**
+**다음 활동을 진행하는 동안 이 지침을 참고할 수 있도록 다른 브라우저 탭을 여는 것을 권장합니다.**
 
-Before you open up a codespace on a repository, you can create a development container and define specific extensions or configurations that will be used or installed in your codespace. Let's create this development container and add copilot to the list of extensions.
+리포지토리에서 Codespace를 열기 전에, 개발 컨테이너를 만들고 Codespace에서 사용하거나 설치할 특정 확장 프로그램 또는 구성을 정의할 수 있습니다. 개발 컨테이너를 만들고 확장 프로그램 목록에 Copilot을 추가해 봅시다.
 
-1. Navigating back to your **Code** tab of your repository, click the **Add file** drop-down button, and then click `Create new file`.
-1. Type or paste the following in the empty text field prompt to name your file.
+1. 리포지토리의 **Code** 탭으로 돌아가서 **Add file** 드롭다운 버튼을 클릭한 다음 `Create new file`을 클릭합니다.
+1. 빈 텍스트 필드에 다음을 입력하거나 붙여넣어 파일 이름을 지정합니다.
    ```
    .devcontainer/devcontainer.json
    ```
-1. In the body of the new **.devcontainer/devcontainer.json** file, add the following content:
+1. 새 **.devcontainer/devcontainer.json** 파일 본문에 다음 내용을 추가합니다:
    ```
    {
        // Name this configuration
@@ -46,17 +46,17 @@ Before you open up a codespace on a repository, you can create a development con
        }
    }
    ```
-1. Select the option to **Commit directly to the `main` branch**, and then click the **Commit new file** button.
-1. Navigate back to the home page of your repository by clicking the **Code** tab located at the top left of the screen.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
+1. **Commit directly to the `main` branch** 옵션을 선택하고 **Commit new file** 버튼을 클릭합니다.
+1. 화면 왼쪽 상단의 **Code** 탭을 클릭하여 리포지토리 홈페이지로 돌아갑니다.
+1. 페이지 중앙에 있는 **Code** 버튼을 클릭합니다.
+1. 팝업 상자에서 **Codespaces** 탭을 클릭합니다.
+1. **Create codespace on main** 버튼을 클릭합니다.
 
-   **Wait about 2 minutes for the codespace to spin itself up.**
+   **Codespace가 시작될 때까지 약 2분 정도 기다립니다.**
 
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
+1. Codespace가 실행 중인지 확인합니다. 브라우저에 VS Code 웹 기반 에디터와 아래와 같은 터미널이 표시되어야 합니다:
    ![Screen Shot 2023-03-09 at 9 09 07 AM](https://user-images.githubusercontent.com/26442605/224102962-d0222578-3f10-4566-856d-8d59f28fcf2e.png)
-1. The `copilot` extension should show up in the VS Code extension list. Click the extensions sidebar tab. You should see the following:
+1. `copilot` 확장 프로그램이 VS Code 확장 프로그램 목록에 표시되어야 합니다. 확장 프로그램 사이드바 탭을 클릭합니다. 다음과 같이 표시되어야 합니다:
    ![Screen Shot 2023-03-09 at 9 04 13 AM](https://user-images.githubusercontent.com/26442605/224102514-7d6d2f51-f435-401d-a529-7bae3ae3e511.png)
 
-**Wait about 60 seconds then refresh your repository landing page for the next step.**
+**약 60초 기다린 후 리포지토리 랜딩 페이지를 새로고침하여 다음 단계로 진행합니다.**
